@@ -17,9 +17,11 @@ To identify a stock performance we are going to calculate the return. For this w
 Now that we had all the numbers needed to calculate the return, we needed to made the calculations. The formula to get the return was *Return=(ClosingPrince/StartingPrice)-1*
 
 In 2017, most of the stocks performed pretty well. Most of them have positive returns, and some even manage to almost triplicate their value, like SEDG or DQ with a return of 184.5% and 199.4%.
+
 ![Stock_Performance_in_2017](Resources/Results/VBA_Results_2017.png)
 
 This seemed great and like an obvious investment opportunity. We can now understand why steve parents invested in DQ stocks, with their 199.4% return. Sadly, the year 2018 was not very friendly for them. Most of the stocks gave negative returns. Only two out of the twelve stocks had a positive return.
+
 ![Stock_Performance_in_2018](Resources/Results/VBA_Results_2018.png)
 
 Seeing how the stocks perfomed, it is not a surprise that steve wanted to do a broader research and investigate more options. Although this decrease might be due to certain news regarding green energies or anomalies, it is better to start seeing other options. We need to expand the data set to include more stocks and see how well are other stocks performing and identify those that are worth investing. In order to scale up the dataset, we need to refactor our code and make sure it runs more efficiently. 
