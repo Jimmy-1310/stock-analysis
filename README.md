@@ -30,6 +30,7 @@ Seeing how the stocks perfomed, it is not a surprise that steve wanted to do a b
 ### Code Performance
 
 The original code worked correctly. It completed all the tasks and formated the sheet just as we wanted, but something seemed odd. If we ran the code and saw how it was working on the sheet, we could see how all the cells were being filled one by one. This action took some time, and made the code ran slower. 
+
 **Original Run Time for the Year 2017**
 
 ![VBA_Challenge_2017_w-o_refracturing](https://user-images.githubusercontent.com/95836718/148657261-ba5f15c0-7505-4fd9-95cd-3472d47b8b7c.png)
@@ -42,11 +43,11 @@ The original code worked correctly. It completed all the tasks and formated the 
 
 It certainly would be faster if the code just inputs it all together. In order to make this we refactored the code to hold each value in a variable, instead of resetting their values everytime we jumped to another ticker. This made the code run faster, compared to the original format.
 
-**Run Time for the Year 2017**
+**Refactored Run Time for the Year 2017**
 
 ![Refactored_Runtime_For_The_Year_2017](Resources/VBA_Challenge_2017.png)
 
-**Run Time for the Year 2018**
+**Refactored Run Time for the Year 2018**
 
 ![Refactored_Runtime_For_The_Year_2018](Resources/VBA_Challenge_2018.png)
 
