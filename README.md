@@ -12,7 +12,8 @@ For this project we used and learned VBA (Visual Basic for Applications). With t
 ### Stock Performance
 To identify a stock performance we are going to calculate the return. For this we needed to identify the first and last closing price the stock had in that year. Fortunatly for us, the dataset was organized by ticker and by date. This made the work of finding the firs and last price easier, because we only needed to look up the first time the ticker appeared and the last time it did, to then compare each closing price. To do this, we created 2 *If-Conditionals*. 
 
-![If_Statement](Code Screenshots/If_Statement.png)
+![If_Statement](https://user-images.githubusercontent.com/95836718/148657231-674c00bf-8c18-4955-ac9e-4602bab68171.png)
+
 
 Now that we had all the numbers needed to calculate the return, we needed to made the calculations. The formula to get the return was *Return=(ClosingPrince/StartingPrice)-1*
 
@@ -31,11 +32,13 @@ Seeing how the stocks perfomed, it is not a surprise that steve wanted to do a b
 The original code worked correctly. It completed all the tasks and formated the sheet just as we wanted, but something seemed odd. If we ran the code and saw how it was working on the sheet, we could see how all the cells were being filled one by one. This action took some time, and made the code ran slower. 
 **Original Run Time for the Year 2017**
 
-![Original_RunTime_For_The_Year_2017](Resources/Original Run Times/VBA_Challenge_2017_w-o_refracturing.png)
+![VBA_Challenge_2017_w-o_refracturing](https://user-images.githubusercontent.com/95836718/148657261-ba5f15c0-7505-4fd9-95cd-3472d47b8b7c.png)
+
 
 **Original Run Time for the Year 2018**
 
-![Original_RunTime_For_The_Year_2018](Resources/Original Run Times/VBA_Challenge_2018_wo_refacturing.png)
+![VBA_Challenge_2018_wo_refacturing](https://user-images.githubusercontent.com/95836718/148657268-7126cfb7-1690-4b4a-b821-ba469b170f56.png)
+
 
 It certainly would be faster if the code just inputs it all together. In order to make this we refactored the code to hold each value in a variable, instead of resetting their values everytime we jumped to another ticker. This made the code run faster, compared to the original format.
 
@@ -50,23 +53,28 @@ It certainly would be faster if the code just inputs it all together. In order t
 ### Refactoring Process
 The first change we needed make to our code were the variables. In the original code, the variables that contained the volume, initial price and closing price of a stock were individual variables. 
 > Dim startingPrice As Double
+
 > Dim closingPrice As Double
+
 > totalVolume=0 (We needed to include this line of code, inside the for loop to reseat it everytime we jumped to another ticker)
 
 This created the need to output the value as soon as we got them, because we were constantly overwriting its value everytime we skipped to another ticker. To solve this problem we created the variable as arrays that could hold 12 values (this number can be change to match the ammount of stocks being analyze). 
 > Dim tickerVolume(11) As Double
+
 > Dim tickerstartingPrice(11) As Double
+
 > Dim tickerclosingPrice(11) As Double
 
 Having the variables as arrays made it easier to store each individual value in a specific variable. Another benefit of this is that, now that we have each value with its own variable, we could expand our code to include individual analysis of specefic stocks. We can store the value and use it later, instead of being output and erased afterwards.
 
 We also needed to change our *for-loop* because we no longer needed to immediatly input our values. The original *for-loop* looked a bit like this: 
 
-![Original_For_Loop](Code Screenshots/Original_ForLoop.png)
+![Original_ForLoop](https://user-images.githubusercontent.com/95836718/148657297-bc6df6de-5c00-47c9-a72f-5aef0fd190ab.png)
 
 We could now take out the input instructions of the loop, but we needed to create another for loop to output the values. The refactored *for-loop* with the aditional loop looks like this:
 
-![Refactored_For_Loop](Code Screenshots/Refactored_For_Loop.png)
+![Refactored_For_Loop](https://user-images.githubusercontent.com/95836718/148657305-ec742570-99ab-40c0-81dc-99b49a29e17a.png)
+
 
 ## Summary
 
