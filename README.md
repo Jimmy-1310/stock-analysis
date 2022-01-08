@@ -28,6 +28,7 @@ Seeing how the stocks perfomed, it is not a surprise that steve wanted to do a b
 
 ### Code Performance
 
+The original code worked correctly. It completed all the tasks and formated the sheet just as we wanted, but something seemed odd. If we ran the code and saw how it was working on the sheet, we could see how all the cells were being filled one by one. This action took some time, and made the code ran slower. It certainly would be faster if the code just inputs it all together. 
 
 ## Summary
 
