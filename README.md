@@ -12,17 +12,17 @@ For this project we used and learned VBA (Visual Basic for Applications). With t
 ### Stock Performance
 To identify a stock performance we are going to calculate the return. For this we needed to identify the first and last closing price the stock had in that year. Fortunatly for us, the dataset was organized by ticker and by date. This made the work of finding the firs and last price easier, because we only needed to look up the first time the ticker appeared and the last time it did, to then compare each closing price. To do this, we created 2 *If-Conditionals*. 
 
-![If_Statement](Code Screenshots/If_Statement.png)
+! [If_Statement](Code Screenshots/If_Statement.png)
 
 Now that we had all the numbers needed to calculate the return, we needed to made the calculations. The formula to get the return was *Return=(ClosingPrince/StartingPrice)-1*
 
 In 2017, most of the stocks performed pretty well. Most of them have positive returns, and some even manage to almost triplicate their value, like SEDG or DQ with a return of 184.5% and 199.4%.
 
-![Stock_Performance_in_2017](Resources/Results/VBA_Results_2017.png)
+! [Stock_Performance_in_2017](Resources/Results/VBA_Results_2017.png)
 
 This seemed great and like an obvious investment opportunity. We can now understand why steve parents invested in DQ stocks, with their 199.4% return. Sadly, the year 2018 was not very friendly for them. Most of the stocks gave negative returns. Only two out of the twelve stocks had a positive return.
 
-![Stock_Performance_in_2018](Resources/Results/VBA_Results_2018.png)
+! [Stock_Performance_in_2018](Resources/Results/VBA_Results_2018.png)
 
 Seeing how the stocks perfomed, it is not a surprise that steve wanted to do a broader research and investigate more options. Although this decrease might be due to certain news regarding green energies or anomalies, it is better to start seeing other options. We need to expand the data set to include more stocks and see how well are other stocks performing and identify those that are worth investing. In order to scale up the dataset, we need to refactor our code and make sure it runs more efficiently. 
 
@@ -35,7 +35,7 @@ The original code worked correctly. It completed all the tasks and formated the 
 
 **Original Run Time for the Year 2018**
 
-![Original_RunTime_For_The_Year_2018](Resources/Original Run Times/VBA_Challenge_2018_wo_refacturing.png)
+! [Original_RunTime_For_The_Year_2018](Resources/Original Run Times/VBA_Challenge_2018_wo_refacturing.png)
 
 It certainly would be faster if the code just inputs it all together. In order to make this we refactored the code to hold each value in a variable, instead of resetting their values everytime we jumped to another ticker. This made the code run faster, compared to the original format.
 
@@ -66,7 +66,7 @@ We also needed to change our *for-loop* because we no longer needed to immediatl
 
 We could now take out the input instructions of the loop, but we needed to create another for loop to output the values. The refactored *for-loop* with the aditional loop looks like this:
 
-![Refactored_For_Loop](Code Screenshots/Refactored_For_Loop.png)
+! [Refactored_For_Loop](Code Screenshots/Refactored_For_Loop.png)
 
 ## Summary
 
